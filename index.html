@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lesson_03</title>
+</head>
+<body>
+	<form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="post">
+		<p>
+			<label>Surname
+				<br>
+				<input type="text" name="surname" required="required">
+			</label>
+		</p>
+
+		<p>
+			<label>Given Names
+				<br>
+				<input type="text" name="name">
+			</label>
+		</p>
+
+		<p>
+			<label>Full Name in Native Alphabet
+				<br>
+				<input type="text" name="full_name" >
+			</label>
+			<br>
+			<label>
+				<input type="checkbox" name="aplly">Does Not Apply/Technology Not Available
+			</label>
+		</p>
+
+		<p>Q: Have you ever used other names (i.e., maiden, religious, professional, alias, etc.</p>		
+		<label>
+			<input type="radio" name="other_name" value="Yes"> Yes
+		</label>
+		<label>
+			<input type="radio" name="other_name" value="No" checked="checked"> No
+		</label>
+
+		<p>Q: Do you have a telecode that represents your name?</p>
+		<label>
+			<input type="radio" name="telecode" value="Yes"> Yes
+		</label>
+		<label>
+			<input type="radio" name="telecode" value="No" checked="checked"> No
+		</label>
+
+		<p>Sex
+			<br>
+			<label>
+				<input type="radio" name="sex" value="male"> Male
+			</label>
+			<label>
+				<input type="radio" name="sex" value="female"> Female
+			</label>
+		</p>
+		
+		<p>Marital Status
+			<br>
+			<select name="maritel_status">
+				<option value="Married">Married</option>
+				<option value="Single">Single</option>
+			</select>
+		</p>
+		
+		<fieldset>
+
+			<legend>Date and Place of Birth</legend>
+
+			<label>Date
+				<br>
+				<input type="date" name="date">
+			</label>
+
+			<br>
+
+			<label>City
+				<br>
+				<input type="text" name="city">
+			</label>
+
+			<p>
+				<label>State/Province
+					<br>
+					<input type="State" name="state" disabled="disabled">
+				</label>
+
+				<br>
+
+				<label>
+					<input type="checkbox" name="state" value="disabled">
+					Does Not Apply
+				</label>
+			</p>
+
+			<p>Country/Region
+				<br>
+				<select name="maritel_status">
+					<option value="Married">Married</option>
+					<option value="Single">Single</option>
+				</select>
+			</p>
+
+		</fieldset>
+
+		<input type="submit" >
+	</form>
+</body>
+</html>
