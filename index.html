@@ -5,10 +5,13 @@
 	<title>lesson_03</title>
 </head>
 <body>
+
 <!-- target attr of the form is "_blank" -->
 	<form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="post" target="_blank">
+
 <!-- hidden type -->
 		<input type="hidden" name="author" value="Ignat">
+
 <!-- text type, attr: autocomplete, required, autofocus -->
 		<p>
 			<label>Surname
@@ -16,6 +19,7 @@
 				<input type="text" name="surname" required="required" autofocus="autofocus" autocomplete="off">
 			</label>
 		</p>
+
 <!-- password type -->
 		<p>
 			<label>Password
@@ -23,6 +27,7 @@
 				<input type="password" name="password">
 			</label>
 		</p>
+
 <!-- email type, attr multiple -->
 		<p>
 			<label>Email
@@ -30,13 +35,15 @@
 				<input type="email" name="email" multiple="multiple">
 			</label>
 		</p>
+
 <!-- number type, attr: maxlength, min, max -->
 		<p>
-			<label>ID number
+			<label>number
 				<br>
-				<input type="number" name="id_number" style="width: 13em" maxlength="9" min="0" max="9">
+				<input type="number" name="id_number" style="width: 13em" min="0" max="999999">
 			</label>
 		</p>
+
 <!-- checkbox type, fieldset element, attr: checked, value -->
     <fieldset>
       <legend>Favorite item</legend>
@@ -58,13 +65,16 @@
         </label> color
       </p>
     </fieldset>
+
 <!-- textarea element, attr: cols, rows, minlength, placeholder -->
 		<p>
 			<label for="comment">Comment:
 				<br>
-				<textarea id="comment" cols="30" rows="4" name="comment" minlength="30" placeholder="Make comment at least 30 characters"></textarea>
+				<textarea id="comment" cols="30" rows="4" name="comment" minlength="30" placeholder="Make comment">
+        </textarea>
 			</label>
 		</p>
+
 <!-- radio type -->
 		<p>Sex
 			<br>
@@ -75,61 +85,42 @@
 				<input type="radio" name="sex" value="female"> Female
 			</label>
 		</p>
+
 <!-- range type, attr min, max, step -->
     <p>Growth
       <div>
         <label>
           <input type="range" name="growth" min="0" max="2.5" step="0.1">
         </label>
-      </div>
-      
+      </div>    
     </p>
+
 <!-- date type -->
     <p> 
       <label>Date
         <br>
         <input type="date" name="date" >
       </label>
+    </p>
+
 <!-- time type -->
+    <p>
       <label>Time
         <br>
         <input type="time" name="time" >
       </label>
     </p>
-<!-- select element -->			
-			<p>
-        <label for="select">Marital status:</label>
-				<br>
-				<select id="select" name="maritel_status">
-					<option value="Married">Married</option>
-					<option value="Single">Single</option>
-				</select>
-			</p>
-				
-				<label>City
-					<br>
-					<input type="text" name="city">
-				</label>
 
-			<p>
-				<label>State/Province
-					<br>
-					<input type="State" name="state" disabled="disabled">
-				</label>
-				<br>
-				<label>
-					<input type="checkbox" name="state_availble" value="true">
-					Does Not Apply
-				</label>
-			</p>
-
-			<p>Country/Region
-				<br>
-				<select name="maritel_status">
-					<option value="Married">Married</option>
-					<option value="Single">Single</option>
-				</select>
-			</p>
+<!-- select element, disabled -->
+		<p>
+      <label for="select">Command:</label>
+			<br>
+			<select id="select" name="command" list="commands">
+        <option value="start" disabled="disabled">start</option>
+        <option value="stop" selected="selected">stop</option>
+        <option value="finish">finish</option>
+			</select>
+		</p>
 
 		<input type="submit" >
 	</form>
