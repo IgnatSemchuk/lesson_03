@@ -5,48 +5,67 @@
 	<title>lesson_03</title>
 </head>
 <body>
-	<form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="post">
+<!-- target attr of the form is "_blank" -->
+	<form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="post" target="_blank">
+<!-- hidden type -->
+		<input type="hidden" name="author" value="Ignat">
+<!-- text type, attr: autocomplete, required, autofocus -->
 		<p>
 			<label>Surname
 				<br>
-				<input type="text" name="surname" required="required">
+				<input type="text" name="surname" required="required" autofocus="autofocus" autocomplete="off">
 			</label>
 		</p>
-
+<!-- password type -->
 		<p>
-			<label>Given Names
+			<label>Password
 				<br>
-				<input type="text" name="name">
+				<input type="password" name="password">
 			</label>
 		</p>
-
+<!-- email type, attr multiple -->
 		<p>
-			<label>Full Name in Native Alphabet
+			<label>Email
 				<br>
-				<input type="text" name="full_name" >
-			</label>
-			<br>
-			<label>
-				<input type="checkbox" name="aplly">Does Not Apply/Technology Not Available
+				<input type="email" name="email" multiple="multiple">
 			</label>
 		</p>
+<!-- number type, attr: maxlength, min, max -->
+		<p>
+			<label>ID number
+				<br>
+				<input type="number" name="id_number" style="width: 13em" maxlength="9" min="0" max="9">
+			</label>
+		</p>
+<!-- checkbox type, fieldset element, attr: checked, value -->
+    <fieldset>
+      <legend>Favorite item</legend>
 
-		<p>Q: Have you ever used other names (i.e., maiden, religious, professional, alias, etc.</p>		
-		<label>
-			<input type="radio" name="other_name" value="Yes"> Yes
-		</label>
-		<label>
-			<input type="radio" name="other_name" value="No" checked="checked"> No
-		</label>
+      <label>
+          <input type="checkbox" name="item" value="item1"> item1
+      </label>
+      <label>
+          <input type="checkbox" name="item" value="item2"> item2
+      </label>
+      <label>
+          <input type="checkbox" name="item3" value="item3" checked="checked"> item3
+      </label>
 
-		<p>Q: Do you have a telecode that represents your name?</p>
-		<label>
-			<input type="radio" name="telecode" value="Yes"> Yes
-		</label>
-		<label>
-			<input type="radio" name="telecode" value="No" checked="checked"> No
-		</label>
-
+      <!-- color type -->
+      <p>
+        <label>
+          <input type="color" name="color" value="#ff0000">
+        </label> color
+      </p>
+    </fieldset>
+<!-- textarea element, attr: cols, rows, minlength, placeholder -->
+		<p>
+			<label for="comment">Comment:
+				<br>
+				<textarea id="comment" cols="30" rows="4" name="comment" minlength="30" placeholder="Make comment at least 30 characters"></textarea>
+			</label>
+		</p>
+<!-- radio type -->
 		<p>Sex
 			<br>
 			<label>
@@ -56,41 +75,50 @@
 				<input type="radio" name="sex" value="female"> Female
 			</label>
 		</p>
-		
-		<p>Marital Status
-			<br>
-			<select name="maritel_status">
-				<option value="Married">Married</option>
-				<option value="Single">Single</option>
-			</select>
-		</p>
-		
-		<fieldset>
-
-			<legend>Date and Place of Birth</legend>
-
-			<label>Date
+<!-- range type, attr min, max, step -->
+    <p>Growth
+      <div>
+        <label>
+          <input type="range" name="growth" min="0" max="2.5" step="0.1">
+        </label>
+      </div>
+      
+    </p>
+<!-- date type -->
+    <p> 
+      <label>Date
+        <br>
+        <input type="date" name="date" >
+      </label>
+<!-- time type -->
+      <label>Time
+        <br>
+        <input type="time" name="time" >
+      </label>
+    </p>
+<!-- select element -->			
+			<p>
+        <label for="select">Marital status:</label>
 				<br>
-				<input type="date" name="date">
-			</label>
-
-			<br>
-
-			<label>City
-				<br>
-				<input type="text" name="city">
-			</label>
+				<select id="select" name="maritel_status">
+					<option value="Married">Married</option>
+					<option value="Single">Single</option>
+				</select>
+			</p>
+				
+				<label>City
+					<br>
+					<input type="text" name="city">
+				</label>
 
 			<p>
 				<label>State/Province
 					<br>
 					<input type="State" name="state" disabled="disabled">
 				</label>
-
 				<br>
-
 				<label>
-					<input type="checkbox" name="state" value="disabled">
+					<input type="checkbox" name="state_availble" value="true">
 					Does Not Apply
 				</label>
 			</p>
@@ -102,8 +130,6 @@
 					<option value="Single">Single</option>
 				</select>
 			</p>
-
-		</fieldset>
 
 		<input type="submit" >
 	</form>
