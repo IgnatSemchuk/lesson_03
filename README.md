@@ -2,7 +2,7 @@
 ## Task n.1 make the form
 ### Requirements:
 
-You may look the [form](https://ignatsemchuk.github.io/mateacademy_lesson_03-form1/)
+You may look the [form](https://ignatsemchuk.github.io/mateacademy_form/)
 
 Form should have different inputs:
 + text (done)
